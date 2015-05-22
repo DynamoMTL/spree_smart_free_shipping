@@ -1,0 +1,10 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  spree:
+    shipping_method_codes: Shipping Method Code(s) (comma separated)
+    promotion_action_types:
+      make_shipping_method_free:
+        name: Make shipping method(s) free
+        description: Make shipping method(s) free

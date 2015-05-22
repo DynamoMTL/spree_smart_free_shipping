@@ -1,0 +1,13 @@
+<div class="calculator-fields row option-value-action-js">
+  <div class="settings field omega eight columns">
+    <% promotion_action.calculator.preferences.keys.map do |key| %>
+      <% field_name = "#{param_prefix}[calculator_attributes][preferred_#{key}]" %>
+      <%= label_tag field_name, Spree.t(key.to_s) %>
+      <%= preference_field_tag(field_name,
+                                promotion_action.calculator.get_preference(key),
+                               :type => promotion_action.calculator.preference_type(key)) %>
+      <% end %>
+      <%= hidden_field_tag "#{param_prefix}[calculator_attributes][id]",
+            promotion_action.calculator.id %>
+  </div>
+</div>
